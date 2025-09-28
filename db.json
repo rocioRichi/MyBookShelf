@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "title": "BookCuatro",
+      "title": "BookCuatroeditado",
       "author": "Autor34",
       "published": "2025-08-04",
       "category": "No ficción",
@@ -97,20 +97,20 @@
       "stock": 12
     },
     {
-      "id": 13,
-      "title": "BookTrece",
-      "author": "Autor13",
-      "published": "2025-08-13",
-      "category": "Software",
-      "stock": 13
-    },
-    {
       "id": 14,
       "title": "BookCatorce",
       "author": "Autor15",
       "published": "2025-09-14",
       "category": "Ciencia",
       "stock": 14
+    },
+    {
+      "title": "BookNuevo",
+      "author": "AutorNuevo",
+      "published": "2025-09-28",
+      "category": "Historia",
+      "stock": 15,
+      "id": 15
     }
   ]
 }
