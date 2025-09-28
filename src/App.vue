@@ -1,30 +1,40 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Toaster from "./components/Toaster.vue";
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-</template>
+  <div class="min-h-full">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-40 bg-[var(--surface)]/70 backdrop-blur border-b border-white/10"
+    >
+      <div class="container-app flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <div class="size-7 rounded-xl bg-[var(--primary)]"></div>
+          <h1 class="text-lg font-semibold">BookShelf</h1>
+        </div>
+        <nav class="flex items-center gap-2">
+          <router-link
+            to="/books"
+            class="nav-link"
+            active-class="nav-link-active"
+            >Listado</router-link
+          >
+          <router-link
+            to="/books/new"
+            class="nav-link"
+            active-class="nav-link-active"
+            >Nuevo</router-link
+          >
+        </nav>
+      </div>
+    </header>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+    <!-- Main -->
+    <main class="container-app py-6 fade-in">
+      <router-view />
+    </main>
+
+    <Toaster />
+  </div>
+</template>
